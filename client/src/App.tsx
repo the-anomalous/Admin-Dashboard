@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useAppDispatch } from "./store/hooks";
 import { Route, Routes, Navigate } from "react-router-dom";
 
-import Layout from "./pages/layout.page";
-import { Dashboard } from "./scenes";
+import {Layout} from "./pages";
+import { Dashboard } from "./pages";
 import { setTheme } from "./features";
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
 	}, [dispatch]);
 
 	return (
-		<div className="bg-background-default h-screen">
+		<div className="bg-background-default h-screen flex ">
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<Navigate to="/dashboard" replace />} />

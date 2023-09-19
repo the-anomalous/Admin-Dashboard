@@ -1,12 +1,20 @@
-import React from "react";
+import {useState} from "react";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "../components";
+import { Navbar, Sidebar } from "../components";
 
 const Layout = () => {
-	return (
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  
+  return (
 		<>
-			<Navbar />
-			<Outlet />
+      <Sidebar isSidebarOpen={isSidebarOpen}/>
+      <main className="w-full">
+        <Navbar 
+          setIsSidebarOpen={setIsSidebarOpen} 
+          isSidebarOpen={isSidebarOpen}
+        />
+        <Outlet />
+      </main>
 		</>
 	);
 };
