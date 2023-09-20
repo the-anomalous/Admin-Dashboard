@@ -1,8 +1,9 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors =  require("cors") 
-const helmet = require("helmet");
-const morgan = require("morgan");
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import morgan from "morgan";
+import bodyParser from "body-parser";
+
 const app = express()
 
 // Middlewares
@@ -18,4 +19,4 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
-module.exports = app
+export default app
