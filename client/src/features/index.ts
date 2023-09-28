@@ -1,24 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 type TinitialState = {
-	theme: "dark" | "light";
+  theme: 'dark' | 'light';
 };
 
 const initialState: TinitialState = {
-	theme: "dark",
+  theme: 'dark',
 };
 
 const globalSlice = createSlice({
-	name: "global",
-	initialState,
-	reducers: {
-		setTheme: (state, { payload }) => {
-			const root = document.documentElement;
-			root.dataset.theme = payload;
-			state.theme = payload;
-			localStorage.setItem("theme", payload);
-		},
-	},
+  name: 'global',
+  initialState,
+  reducers: {
+    setTheme: (state, { payload }) => {
+      const root = document.documentElement;
+      root.dataset.theme = payload;
+      state.theme = payload;
+      localStorage.setItem('theme', payload);
+    },
+  },
 });
 
 export const { setTheme } = globalSlice.actions;

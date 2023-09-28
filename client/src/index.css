@@ -5,63 +5,63 @@
 
 /* CSS Resets */
 html {
-	font-size: 62%; /* 1rem = 10px  */
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  font-size: 62%; /* 1rem = 10px  */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 
-	/* Light Theme */
-	--pri-main: #f0f0f0;
-	--pri-light: #e0e0e0;
+  /* Light Theme */
+  --pri-main: #f0f0f0;
+  --pri-light: #e0e0e0;
 
-	--sec-main: #cca752;
-	--sec-light: #997d3d;
+  --sec-main: #cca752;
+  --sec-light: #997d3d;
 
-	--neutral-main: #666;
+  --neutral-main: #666;
 
-	--bg-default: #fff;
-	--bg-alt: #f0f0f0;
+  --bg-default: #fff;
+  --bg-alt: #f0f0f0;
 }
 
-html[data-theme="dark"] {
-	font-size: 62%; /* 1rem = 10px  */
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+html[data-theme='dark'] {
+  font-size: 62%; /* 1rem = 10px  */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 
-	/* Dark Theme */
-	--pri-main: #4d547d;
-	--pri-light: #4d547d;
+  /* Dark Theme */
+  --pri-main: #4d547d;
+  --pri-light: #4d547d;
 
-	--sec-main: #ffe3a3;
-	--sec-light: none;
+  --sec-main: #ffe3a3;
+  --sec-light: none;
 
-	--neutral-main: #666;
+  --neutral-main: #666;
 
-	--bg-default: #191f45;
-	--bg-alt: #21295c;
+  --bg-default: #191f45;
+  --bg-alt: #21295c;
 }
 
 *,
 *::after,
 *::before {
-	padding: 0;
-	margin: 0;
-	box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
 body {
-	font-family: "inter" sans-serif;
-	font-weight: 400;
-	font-size: 1.6rem;
+  font-family: 'inter' sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 p {
-	font-family: "inter" sans-serif;
-	font-weight: 400;
+  font-family: 'inter' sans-serif;
+  font-weight: 400;
 }
 
 a,
 a:visited,
 a:active {
-	text-decoration: none;
-	cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }

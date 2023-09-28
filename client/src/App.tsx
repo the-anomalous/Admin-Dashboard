@@ -1,35 +1,34 @@
-import { useEffect } from "react";
-import { useAppDispatch } from "./store/hooks";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { useEffect } from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { useAppDispatch } from './store/hooks';
 
-import {Layout} from "./pages";
-import { Dashboard } from "./pages";
-import { setTheme } from "./features";
+import { Layout, Dashboard } from './pages';
+import { setTheme } from './features';
 
-const App = () => {
-	const dispatch = useAppDispatch();
+function App() {
+  const dispatch = useAppDispatch();
 
-	useEffect(() => {
-		const currentTheme = window.matchMedia(
-			"(prefers-color-scheme: dark)",
-		).matches;
-		if (currentTheme) {
-			dispatch(setTheme("dark"));
-		} else {
-			dispatch(setTheme("light"));
-		}
-	}, [dispatch]);
+  useEffect(() => {
+    const currentTheme = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    if (currentTheme) {
+      dispatch(setTheme('dark'));
+    } else {
+      dispatch(setTheme('light'));
+    }
+  }, [dispatch]);
 
-	return (
-		<div className="bg-background-default h-screen flex ">
-			<Routes>
-				<Route element={<Layout />}>
-					<Route path="/" element={<Navigate to="/dashboard" replace />} />
-					<Route path="/dashboard" element={<Dashboard />} />
-				</Route>
-			</Routes>
-		</div>
-	);
-};
+  return (
+    <div className="bg-background-default h-screen flex ">
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </div>
+  );
+}
 
 export default App;
